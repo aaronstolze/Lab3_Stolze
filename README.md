@@ -32,3 +32,7 @@ nibble3 <= "0000";
 ```
 
 This code is now fixed since it has been assigned to something.  
+
+# Functionality
+
+Both the Moore and the Mealy Elevator controls were instantiated which created the bit files to be used in implementation.  
