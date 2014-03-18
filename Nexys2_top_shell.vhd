@@ -91,22 +91,31 @@ signal ClockBus_sig : STD_LOGIC_VECTOR (26 downto 0);
 --------------------------------------------------------------------------------------
 --Insert your design's component declaration below	
 --------------------------------------------------------------------------------------
-COMPONENT MooreElevatorController_Shell
+--COMPONENT MooreElevatorController_Shell
+--	PORT(
+--		clk : IN std_logic;
+--		reset : IN std_logic;
+--		stop : IN std_logic;
+--		up_down : IN std_logic;          
+--		floor : OUT std_logic_vector(3 downto 0)
+--		);
+--	END COMPONENT;
+
+	COMPONENT MealyElevatorController_Shell
 	PORT(
 		clk : IN std_logic;
 		reset : IN std_logic;
 		stop : IN std_logic;
 		up_down : IN std_logic;          
-		floor : OUT std_logic_vector(3 downto 0)
+		floor : OUT std_logic_vector(3 downto 0);
+		nextfloor : OUT std_logic_vector(3 downto 0)
 		);
 	END COMPONENT;
-
-
 
 --------------------------------------------------------------------------------------
 --Insert any required signal declarations below
 --------------------------------------------------------------------------------------
-
+signal floor_signal, next_floor : std_logic_vector(3 downto 0);
 
 
 begin
@@ -180,14 +189,21 @@ nibble3 <= "0000";
 -----------------------------------------------------------------------------
 --Instantiate the design you with to implement below and start wiring it up!:
 -----------------------------------------------------------------------------
-Inst_MooreElevatorController_Shell: MooreElevatorController_Shell PORT MAP(
+--Inst_MooreElevatorController_Shell: MooreElevatorController_Shell PORT MAP(
+	--	clk => ClockBus_sig(25),
+		--reset => btn(3),
+		--stop => btn(0),
+--		up_down => btn(1),
+--		floor => floor_signal
+--	);
+
+	Inst_MealyElevatorController_Shell: MealyElevatorController_Shell PORT MAP(
 		clk => ClockBus_sig(25),
 		reset => btn(3),
-		stop => switch(1),
-		up_down => switch(0),
-		floor => floor
+		stop => btn(0),
+		up_down => btn(1),
+		floor => floor_signal,
+		nextfloor => next_floor
 	);
-
-
 end Behavioral;
 
