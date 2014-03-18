@@ -36,3 +36,7 @@ This code is now fixed since it has been assigned to something.
 # Functionality
 
 Both the Moore and the Mealy Elevator controls were instantiated which created the bit files to be used in implementation.  
+
+![alt text](https://raw.github.com/aaronstolze/Lab3_Stolze/master/nexys.jpg "Functionality")
+
+Above is a snapshot of the board after the Moore Implementation was implemented.  The elevator would rise on its own without taking input from either the switches or buttons resulting in a constant change of the lights.  
