@@ -11,3 +11,8 @@ Lab 3 Repository
 nibble1 <= ;
 nibble2 <= ;
 nibble3 <= ;
+
+
+ ```javascript
+ var s = "JavaScript syntax highlighting";
+ alert(s);
