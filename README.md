@@ -8,12 +8,12 @@ Lab 3 Repository
 ## Bad Code 
 
 ```
-nibble0 <=;
-nibble1 <= 
-nibble2 <= 
-nibble3 <= ;
+nibble0 <=
+ nibble1 <= 
+ nibble2 <= 
+ nibble3 <= 
+```
 
+This is bad code since none of these variables are assigned to anything.
 
- ```javascript
- var s = "JavaScript syntax highlighting";
- alert(s);
+               
