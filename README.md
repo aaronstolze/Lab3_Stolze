@@ -7,6 +7,7 @@ Lab 3 Repository
 
 ![alt text](https://raw.github.com/aaronstolze/Lab3_Stolze/master/Schematic.jpg "Schematic")
 
+# Main Lab
 
 # Critique
 
